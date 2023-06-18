@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="BCrypt.Net" Version="0.1.0" />
+        <PackageReference Include="Npgsql" Version="8.0.0-preview.3" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Include="..\Data\Abstract\IUserRepository.cs">
+            <Link>IUserRepository.cs</Link>
+        </Compile>
+        <Compile Include="..\Data\Repositories\UserRepository.cs">
+            <Link>UserRepository.cs</Link>
+        </Compile>
+        <Compile Include="..\Data\Abstract\IUtilsRepository.cs">
+            <Link>IUtilsRepository.cs</Link>
+        </Compile>
+        <Compile Include="..\Data\Repositories\UtilsRepository.cs">
+            <Link>UtilsRepository.cs</Link>
+        </Compile>
+        <Compile Include="..\Data\Abstract\ICourseRepository.cs">
+            <Link>ICourseRepository.cs</Link>
+        </Compile>
+        <Compile Include="..\Data\Repositories\CourseRepository.cs">
+            <Link>CourseRepository.cs</Link>
+        </Compile>
+        <Compile Include="..\Data\Query\Querrier.cs">
+            <Link>Querrier.cs</Link>
+        </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Data\Data.csproj" />
+    </ItemGroup>
+
+</Project>

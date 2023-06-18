@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql" Version="8.0.0-preview.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Models\User.cs">
+      <Link>User.cs</Link>
+    </Compile>
+    <Compile Include="..\Models\Student.cs">
+      <Link>Student.cs</Link>
+    </Compile>
+    <Compile Include="..\Models\Instructor.cs">
+      <Link>Instructor.cs</Link>
+    </Compile>
+    <Compile Include="..\Models\Transcript.cs">
+      <Link>Transcript.cs</Link>
+    </Compile>
+    <Compile Include="..\Models\Course.cs">
+      <Link>Course.cs</Link>
+    </Compile>
+    <Compile Include="..\Models\Survey.cs">
+      <Link>Survey.cs</Link>
+    </Compile>
+    <Compile Include="..\Models\Question.cs">
+      <Link>Question.cs</Link>
+    </Compile>
+  </ItemGroup>
+
+</Project>

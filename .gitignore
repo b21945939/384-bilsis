@@ -1,0 +1,7 @@
+**/bin
+**/obj
+.idea
+.vs
+
+# for macos
+.DS_Store
